@@ -172,38 +172,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  let activeFormat = null;
   const scorecardPanel = document.querySelector(".scorecard-panel");
+
+  // Helper to sync active state visuals
+  function syncActiveVisuals(formatKey) {
+    formatButtons.forEach(btn => {
+      if (btn.getAttribute("data-format") === formatKey) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
 
   // Add event listener to each bubble item
   formatButtons.forEach(button => {
+    const format = button.getAttribute("data-format");
+
+    // Single click: Show minimal stats (lock format open)
     button.addEventListener("click", () => {
-      const format = button.getAttribute("data-format");
-      
-      if (format === "test") {
-        window.location.href = "test.html";
-        return;
+      activeFormat = format;
+      syncActiveVisuals(activeFormat);
+      if (scorecardPanel) {
+        scorecardPanel.classList.add("active");
       }
-      
-      if (format === "odi") {
-        window.location.href = "odi.html";
-        return;
-      }
-      
-      if (format === "t20") {
-        window.location.href = "t20.html";
-        return;
-      }
-      
-      if (format === "ipl") {
-        window.location.href = "ipl.html";
-        return;
-      }
+      updateStats(activeFormat);
+      switchJersey(activeFormat);
+    });
+
+    // Double click: Redirect to format profile page
+    button.addEventListener("dblclick", () => {
+      window.location.href = format + ".html";
     });
 
     // Hover event listeners to show vector jersey previews and scorecard stats temporarily for all formats
     button.addEventListener("mouseenter", () => {
-      const format = button.getAttribute("data-format");
-      button.classList.add("active");
+      syncActiveVisuals(format);
       if (scorecardPanel) {
         scorecardPanel.classList.add("active");
       }
@@ -212,11 +217,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     button.addEventListener("mouseleave", () => {
-      button.classList.remove("active");
-      if (scorecardPanel) {
-        scorecardPanel.classList.remove("active");
+      if (activeFormat) {
+        syncActiveVisuals(activeFormat);
+        updateStats(activeFormat);
+        switchJersey(activeFormat);
+      } else {
+        formatButtons.forEach(btn => btn.classList.remove("active"));
+        if (scorecardPanel) {
+          scorecardPanel.classList.remove("active");
+        }
+        switchJersey("test");
       }
-      switchJersey("test");
     });
   });
 
