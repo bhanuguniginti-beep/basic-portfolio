@@ -190,20 +190,19 @@ document.addEventListener("DOMContentLoaded", () => {
   formatButtons.forEach(button => {
     const format = button.getAttribute("data-format");
 
-    // Single click: Show minimal stats (lock format open)
+    // Click event: Show minimal stats on first click, redirect to format page on repeat click
     button.addEventListener("click", () => {
-      activeFormat = format;
-      syncActiveVisuals(activeFormat);
-      if (scorecardPanel) {
-        scorecardPanel.classList.add("active");
+      if (activeFormat === format) {
+        window.location.href = format + ".html";
+      } else {
+        activeFormat = format;
+        syncActiveVisuals(activeFormat);
+        if (scorecardPanel) {
+          scorecardPanel.classList.add("active");
+        }
+        updateStats(activeFormat);
+        switchJersey(activeFormat);
       }
-      updateStats(activeFormat);
-      switchJersey(activeFormat);
-    });
-
-    // Double click: Redirect to format profile page
-    button.addEventListener("dblclick", () => {
-      window.location.href = format + ".html";
     });
 
     // Hover event listeners to show vector jersey previews and scorecard stats temporarily for all formats
