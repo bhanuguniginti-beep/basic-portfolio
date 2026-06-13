@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Cricket | Virat Kohli</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;600&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="test-page-body">
+
+  <div class="test-page-container">
+    
+    <!-- Floating Back Arrow -->
+    <a href="index.html#stats-section" class="back-btn">
+      <i class="fa-solid fa-arrow-left-long"></i>
+      <span>BACK TO PORTFOLIO</span>
+    </a>
+
+    <!-- Content Card -->
+    <div class="test-content-card">
+      <div class="test-accent-label">FORMAT PROFILE</div>
+      <h1 class="test-page-title">TEST CRICKET</h1>
+      
+      <p class="test-page-desc">
+        Virat Kohli's contribution to Test cricket goes far beyond runs and records. He brought a new level of intensity, passion, and competitiveness to the format, inspiring a generation of cricketers to value Test cricket. As a leader, he encouraged an aggressive and fearless approach, helping India become a strong force both at home and overseas. His commitment to fitness, discipline, and excellence set new standards for the team. Through his dedication and love for the longest format of the game, Virat Kohli played a major role in keeping Test cricket exciting and respected in the modern era.
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="test-stats-grid">
+        <div class="test-stat-box">
+          <span class="test-stat-label">Matches</span>
+          <span class="test-stat-value" id="stat-matches">0</span>
+        </div>
+        <div class="test-stat-box">
+          <span class="test-stat-label">Runs</span>
+          <span class="test-stat-value" id="stat-runs">0</span>
+        </div>
+        <div class="test-stat-box">
+          <span class="test-stat-label">Average</span>
+          <span class="test-stat-value" id="stat-avg">0.00</span>
+        </div>
+        <div class="test-stat-box">
+          <span class="test-stat-label">Highest Score</span>
+          <span class="test-stat-value" id="stat-hs">0</span>
+        </div>
+        <div class="test-stat-box">
+          <span class="test-stat-label">Hundreds (100s)</span>
+          <span class="test-stat-value" id="stat-100s">0</span>
+        </div>
+        <div class="test-stat-box">
+          <span class="test-stat-label">Fifties (50s)</span>
+          <span class="test-stat-value" id="stat-50s">0</span>
+        </div>
+      </div>
+
+      <!-- Impact bar in footer -->
+      <div class="test-stats-footer">
+        <div class="test-impact-section">
+          <span class="test-impact-label">Batting Impact Index</span>
+          <div class="test-impact-bar">
+            <div class="test-impact-bar-fill" id="impact-progress" data-val="85%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Memories Section -->
+    <div class="test-content-card memories-card">
+      <div class="test-accent-label">GALLERY</div>
+      <h2 class="memories-section-title">TEST MEMORIES</h2>
+      
+      <!-- Showcase Area -->
+      <div class="memory-showcase">
+        <div class="showcase-image-wrapper scroll-reveal-img">
+          <img src="memories_1.png" alt="Test Memory Showcase" id="active-memory-img">
+        </div>
+        <div class="showcase-caption-box">
+          <h3 id="active-memory-title">THE CROWD SILENCER</h3>
+          <p id="active-memory-desc">An iconic gesture of composure and defiance, responding to vocal overseas crowds with pure batting masterclasses.</p>
+        </div>
+      </div>
+
+      <!-- Thumbnails Grid -->
+      <div class="memory-thumbnails-container">
+        <div class="memory-thumb active scroll-reveal-img" data-index="0" data-img="memories_1.png" data-title="THE CROWD SILENCER" data-desc="An iconic gesture of composure and defiance, responding to vocal overseas crowds with pure batting masterclasses.">
+          <img src="memories_1.png" alt="Memory 1">
+          <span class="thumb-num">01</span>
+        </div>
+        <div class="memory-thumb scroll-reveal-img" data-index="1" data-img="memories_2.png" data-title="THE CENTURY MILESTONE" data-desc="Raising the bat in celebration, a sight that became synonymous with Indian Test cricket dominance under his reign.">
+          <img src="memories_2.png" alt="Memory 2">
+          <span class="thumb-num">02</span>
+        </div>
+        <div class="memory-thumb scroll-reveal-img" data-index="2" data-img="memories_3.png" data-title="STEELY RESOLVE" data-desc="The absolute focus of a master batsman, mentally preparing to face the red ball in challenging overseas conditions.">
+          <img src="memories_3.png" alt="Memory 3">
+          <span class="thumb-num">03</span>
+        </div>
+        <div class="memory-thumb scroll-reveal-img" data-index="3" data-img="memories_4.png" data-title="TEAM CAMARADERIE" data-desc="Shared moments of joy and triumph on the field, highlighting his role as a passionate leader and teammate.">
+          <img src="memories_4.png" alt="Memory 4">
+          <span class="thumb-num">04</span>
+        </div>
+        <div class="memory-thumb scroll-reveal-img" data-index="4" data-img="memories_5.png?v=2" data-title="THE DETERMINED DEFENDER" data-desc="Leaning on his bat in white Test kit, a portrait reflecting the steely resolve and focus needed to lead India's batting lineup.">
+          <img src="memories_5.png?v=2" alt="Memory 5">
+          <span class="thumb-num">05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered outline of virat kohli jersey (TEST outline) as floating background design -->
+    <div class="test-jersey-background">
+      <svg class="background-jersey active" viewBox="0 0 400 400">
+        <path d="M 160 70 Q 200 95 240 70 L 290 80 L 360 140 L 320 180 L 270 150 L 270 340 Q 200 350 130 340 L 130 150 L 80 180 L 40 140 L 110 80 Z" class="jersey-outline" />
+        <path d="M 160 70 Q 200 95 240 70" class="jersey-accent-line" />
+        <text x="200" y="160" class="jersey-text-name">KOHLI</text>
+        <text x="200" y="270" class="jersey-text-num">18</text>
+      </svg>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = [
+        { id: "stat-matches", val: 123, dec: false },
+        { id: "stat-runs", val: 9230, dec: false },
+        { id: "stat-avg", val: 46.85, dec: true },
+        { id: "stat-hs", val: 254, dec: false, suffix: "*" },
+        { id: "stat-100s", val: 30, dec: false },
+        { id: "stat-50s", val: 31, dec: false }
+      ];
+
+      function animateValue(element, start, end, duration, isDecimal = false, suffix = "") {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          const easeProgress = progress * (2 - progress);
+          const currentValue = easeProgress * (end - start) + start;
+          
+          if (isDecimal) {
+            element.textContent = currentValue.toFixed(2) + suffix;
+          } else {
+            element.textContent = Math.floor(currentValue).toLocaleString() + suffix;
+          }
+          
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            if (isDecimal) {
+              element.textContent = end.toFixed(2) + suffix;
+            } else {
+              element.textContent = Math.floor(end).toLocaleString() + suffix;
+            }
+          }
+        };
+        window.requestAnimationFrame(step);
+      }
+
+      // Start animations after a brief delay
+      setTimeout(() => {
+        elements.forEach(item => {
+          const el = document.getElementById(item.id);
+          if (el) {
+            animateValue(el, 0, item.val, 1200, item.dec, item.suffix || "");
+          }
+        });
+
+        const progressFill = document.getElementById("impact-progress");
+        if (progressFill) {
+          progressFill.style.width = progressFill.getAttribute("data-val");
+        }
+      }, 300);
+
+      // Memories Gallery Interactivity & Transition Animation
+      const thumbnails = document.querySelectorAll(".memory-thumb");
+      const activeImg = document.getElementById("active-memory-img");
+      const activeTitle = document.getElementById("active-memory-title");
+      const activeDesc = document.getElementById("active-memory-desc");
+      const showcaseImgWrapper = document.querySelector(".showcase-image-wrapper");
+      const showcaseCaptionBox = document.querySelector(".showcase-caption-box");
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          if (thumb.classList.contains("active")) return;
+
+          // Remove active state from all previews
+          thumbnails.forEach(t => t.classList.remove("active"));
+          thumb.classList.add("active");
+
+          const targetImg = thumb.getAttribute("data-img");
+          const targetTitle = thumb.getAttribute("data-title");
+          const targetDesc = thumb.getAttribute("data-desc");
+
+          // Trigger smooth fade-out and translation shift
+          showcaseImgWrapper.classList.add("fade-out");
+          showcaseCaptionBox.classList.add("fade-out");
+
+          setTimeout(() => {
+            // Change content while transparent
+            activeImg.src = targetImg;
+            activeTitle.textContent = targetTitle;
+            activeDesc.textContent = targetDesc;
+
+            // Swap classes to fade content back in smoothly
+            showcaseImgWrapper.classList.remove("fade-out");
+            showcaseCaptionBox.classList.remove("fade-out");
+            showcaseImgWrapper.classList.add("fade-in");
+            showcaseCaptionBox.classList.add("fade-in");
+
+            // Clean up animation classes once transition completes
+            setTimeout(() => {
+              showcaseImgWrapper.classList.remove("fade-in");
+              showcaseCaptionBox.classList.remove("fade-in");
+            }, 400);
+          }, 350);
+        });
+      });
+
+      // Intersection Observer for scroll-reveal images
+      const testRevealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            testRevealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll(".scroll-reveal-img").forEach(el => {
+        testRevealObserver.observe(el);
+      });
+
+      // Parallax scroll for showcase image
+      window.addEventListener("scroll", () => {
+        const showcaseImg = document.querySelector(".showcase-image-wrapper img");
+        if (showcaseImg) {
+          const rect = showcaseImg.getBoundingClientRect();
+          const viewCenter = window.innerHeight / 2;
+          const elementCenter = rect.top + rect.height / 2;
+          const offset = (elementCenter - viewCenter) * 0.07;
+          showcaseImg.style.transform = `translateY(${offset}px)`;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
